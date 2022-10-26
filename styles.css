@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+:root {
+    font-size: 16px;
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Karla', sans-serif;
+    display: grid;
+    place-items: center;
+    font-weight: 400;
+    background-color: var(--light-gray);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.component {
+    width: 83%;
+    max-width: 39rem;
+    margin: 3rem 0 1rem 0;
+    border-radius: .6rem;
+    overflow: hidden;
+    box-shadow: 0px 18px 125px 0px var(--grayish-blue);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "joinUs"
+    "monthlySub"
+    "whyUs";
+}
+
+.component > div {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.component > div > * {
+    margin-left: .5rem;
+}
+
+/* JOIN OUR COMMUNITY */
+.join-our-com {
+    background-color:white;
+    grid-area: joinUs;
+}
+
+.join-our-com > p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    color: var(--grayish-blue);
+}
+
+.join-our-com > h2 {
+    color: var(--cyan);
+}
+
+.join-our-com > h3 {
+    color: var(--bright-yellow);
+}
+
+/* MONTHLY SUBSCRIPTION */
+.monthly-sub {
+    background-color: var(--cyan);
+    color: var(--light-gray);
+    grid-area: monthlySub;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.per-month {
+    opacity: .8;
+    color: lightgray;
+}
+
+.monthly-sub > p:nth-of-type(1) {
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+}
+
+.signup {
+    border-radius: .4rem;
+    height: 2.7rem;
+    background-color: var(--bright-yellow);
+    border: none;
+    color: var(--light-gray);
+    font-weight: 700;
+    width: 100%;
+    font-size: .9rem;
+    align-self: center;
+    box-shadow: 0px 30px 132px -16px rgba(0,0,0,0.53);
+}
+
+/* WHY US */
+.why-us {
+    background-color: var(--cyan);
+    opacity: .75;
+    color: var(--light-gray);
+    grid-area: whyUs;
+}
+
+.why-us > p {
+    width: 60%;
+    line-height: 1.3rem;
+}
+
+
+/* ATTRIBUTION */
+.attribution {
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+}
+
+/* .attribution a {
+    color: var(--bright-yellow);
+} */
+
+@media screen and (min-width: 600px) {
+    .component {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "joinUs joinUs"
+        "monthlySub whyUs";
+    }
+}
