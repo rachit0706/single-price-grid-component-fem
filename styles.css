@@ -47,16 +47,20 @@ main {
 }
 
 .component > div {
-    padding: 2rem;
+    padding: 1.8rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 1.2rem;
 }
 
 .component > div > * {
     margin-left: .5rem;
 }
 
+h2 {
+    font-size: 1.2rem;
+}
 /* JOIN OUR COMMUNITY */
 .join-our-com {
     background-color:white;
@@ -73,8 +77,9 @@ main {
     color: var(--cyan);
 }
 
-.join-our-com > h3 {
+.join-our-com > p:nth-of-type(1) {
     color: var(--bright-yellow);
+    font-weight: 700;
 }
 
 /* MONTHLY SUBSCRIPTION */
@@ -121,9 +126,9 @@ main {
     grid-area: whyUs;
 }
 
-.why-us > p {
-    width: 64%;
-    line-height: 1.3rem;
+li {
+    list-style-type: none;
+    margin-bottom: 2px;
 }
 
 
